@@ -932,6 +932,11 @@ void CritterCl::Move( int dir )
             time_move = CritType::GetTimeWalk( crtype );
         if( time_move <= 0 )
             time_move = 400;
+
+	int isPlayerSkin = GetRawParam( PE_GHOUL_PLAYER );
+	if (PE_GHOUL_PLAYER > 0) {
+		time_move = 400;
+	}
     }
     else
     {
@@ -941,12 +946,6 @@ void CritterCl::Move( int dir )
         if( time_move <= 0 )
             time_move = 200;
     }
-
-	int isPlayerSkin = GetRawParam( PE_GHOUL_PLAYER );
-	if (PE_GHOUL_PLAYER > 0) {
-		time_move = 400;
-	}
-
 
     // Todo: move faster in turn-based, if(IsTurnBased()) time_move/=2;
     TickStart( time_move );

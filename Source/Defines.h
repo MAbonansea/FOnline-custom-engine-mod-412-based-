@@ -509,6 +509,7 @@ const char ClientSaveSignature[ 4 ] = { 'F', 'O', 0, CLIENT_SAVE_LAST };
 #define PE_MASTER_TRADER             ( 318 )
 #define PE_QUICK_POCKETS             ( 349 )
 #define PE_SMOOTH_TALKER             ( 350 )
+#define PE_GHOUL_PLAYER              ( 362 )
 
 // Addiction
 #define ADDICTION_BEGIN              ( GameOpt.AddictionBegin )
